@@ -33,7 +33,7 @@ We use M-ASK modulation with constellation
 
 $$
  \mathcal{A} = 
-    \frac{1}{M-1} \cdot \big\{\pm1,\pm3,\ldots \pm (M-1)\big\} + o
+    \frac{1}{M-1} \cdot \left\{\pm1,\pm3,\ldots \pm (M-1)\right\} + o
 $$
 
 and offset $o \in [0,1]$. For example, $4$-ASK-$0$ is bipolar with $\mathcal{A} = \tfrac{1}{3}\{\pm 1, \pm 3\}$, while $4$-ASK-$1$ is unipolar with $\mathcal{A} = \tfrac{1}{3} \left\{0,1,2,3\right\}$.
