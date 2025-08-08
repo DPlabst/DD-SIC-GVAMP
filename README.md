@@ -20,7 +20,7 @@ Y(t) =  g_\mathrm{rx}(t) * \left(\left\lvert X(t) + N_1(t)\right\rvert^2 + N_2(t
 $$
 
 with the 
-- baseband signal $X(t) = \sum_\kappa X_\kappa \; a(t-\kappa T)$  and symbol period $T$
+- baseband signal $X(t) = \sum_\kappa X_\kappa  a(t-\kappa T)$  and symbol period $T$
 - i.i.d. discrete channel inputs $X_\kappa$ from the constellation $\mathcal{A}$ 
 - filter $a(t)$ that combines transmit pulseshaping (DAC) and linear fiber effects
 - filter $g_\mathrm{rx}(t)$ that models the ADC at the receiver
@@ -36,7 +36,7 @@ $$
     \frac{1}{M-1} \cdot \left\lbrace \pm1,\pm3,\ldots \pm (M-1)\right\rbrace + o
 $$
 
-and offset $o \in [0,1]$. For example, 4-ASK-0 is bipolar with $\mathcal{A} = \tfrac{1}{3}\left\lbrace\pm 1, \pm 3\right\rbrace$, while 4-ASK-1 is unipolar with $\mathcal{A} = \tfrac{1}{3} \left\lbrace 0,1,2,3\right\rbrace$.
+and offset $o \in [0,1]$. For example, 4-ASK-0 is bipolar with $\mathcal{A} = \frac{1}{3}\left\lbrace\pm 1, \pm 3\right\rbrace$, while 4-ASK-1 is unipolar with $\mathcal{A} = \frac{1}{3} \left\lbrace 0,1,2,3\right\rbrace$.
 
 The code examples below consider the setup:
 
@@ -58,7 +58,7 @@ We provide the two examples:
 
 ### Rates vs. SNR
 
-The plots show rates versus SNR for 16-ASK-$o$, $L=4\mathrm{km}$ and SIC with $S=4$ levels. A smaller constellation offset $o$ is significantly more power efficient. Setting $o=0.2$ gains $\approx 5.3 \mathrm{dB}$ and $\approx 2.6 \mathrm{dB}$  over legacy PAM modulation ($o=1$)  for optical and  electrical noise, respectively. The gap of $16$-ASK-$0.2$ to the (real) coherent capacity is $\approx 0.4\mathrm{bpcu}$.  
+The plots show rates versus SNR for 16-ASK with offset $o$, $L=4\mathrm{km}$ and SIC with $S=4$ levels. A smaller constellation offset $o$ is significantly more power efficient. Setting $o=0.2$ gains $\approx 5.3 \mathrm{dB}$ and $\approx 2.6 \mathrm{dB}$  over legacy PAM modulation ($o=1$)  for optical and  electrical noise, respectively. The gap of 16-ASK-0.2 to the (real) coherent capacity is $\approx 0.4\mathrm{bpcu}$.  
 
 | Example 1a (Optical Noise) | Example 1b (Electrical Noise)|
 |--------|--------|
@@ -67,7 +67,7 @@ The plots show rates versus SNR for 16-ASK-$o$, $L=4\mathrm{km}$ and SIC with $S
 
 ### Rates vs. Iterations
 
-The plots show the achievable rates versus the number of GVAMP iterations for $16$ transmitted blocks, each consisting of $2048$ $16$-ASK-$0.2$ symbols at a fixed SNR. The fiber length is $L = 4\mathrm{km}$ SSMF and the GVAMP receover uses separate detection and decoding (SDD), i.e., $S = 1$. All $16$ blocks converge to rates around to the mean value, indicated by the black curve.
+The plots show the achievable rates versus the number of GVAMP iterations for $16$ transmitted blocks, each consisting of $2048$ 16-ASK-0.2 symbols at a fixed SNR. The fiber length is $L = 4\mathrm{km}$ SSMF and the GVAMP receover uses separate detection and decoding (SDD), i.e., $S = 1$. All $16$ blocks converge to rates around to the mean value, indicated by the black curve.
 
 
 | Example 1a (Optical Noise, $\mathrm{SNR}=23.5 \mathrm{dB}$) | Example 1b (Electrical Noise, $\mathrm{SNR}=10 \mathrm{dB}$)|
