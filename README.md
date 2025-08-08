@@ -36,7 +36,7 @@ $$
     \frac{1}{M-1} \cdot \left\lbrace \pm1,\pm3,\ldots \pm (M-1)\right\rbrace + o
 $$
 
-and offset $o \in [0,1]$. For example, 4-ASK-0 is bipolar with $\mathcal{A} = (1/3)\left\lbrace\pm 1, \pm 3\right\rbrace$, while 4-ASK-1 is unipolar with $\mathcal{A} = (1/3) \left\lbrace 0,1,2,3\right\rbrace$.
+and offset $o \in [0,1]$. For example, 4-ASK-0 is bipolar with $\mathcal{A} = \left\lbrace\pm 1, \pm 3\right\rbrace / 3$, while 4-ASK-1 is unipolar with $\mathcal{A} = \left\lbrace 0,1,2,3\right\rbrace / 3$.
 
 The code examples below consider the setup:
 
