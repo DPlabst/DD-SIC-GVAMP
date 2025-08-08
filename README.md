@@ -30,11 +30,13 @@ with the
 The DD doubles the signal bandwidth. We oversample $Y(t)$ at $N_\text{os} = 2$. The samples are passed to the generalized vector approximate message passing (GVAMP) receiver, which computes symbol a-posteriori probabilities for decoding. GVAMP can use successive interference cancellation (SIC) to increase information rates. Note that, due to the DD operation $|\cdot|^2$, symbol detection becomes a phase retrieval problem.
 
 We use M-ASK modulation with constellation 
+
 $$
  \mathcal{A} = 
     \frac{1}{M-1} \cdot \big\{\pm1,\pm3,\ldots \pm (M-1)\big\} + o
 $$
-and offset $o \in [0,1]$. For example, $4$-ASK-$0$ is bipolar with $\mathcal{A} = \tfrac{1}{3}\{\pm 1, \pm 3\}$, while $4$-ASK-$1$ is unipolar with $\mathcal{A} = \tfrac{1}{3} \{0,1,2,3\}$.
+
+and offset $o \in [0,1]$. For example, $4$-ASK-$0$ is bipolar with $\mathcal{A} = \tfrac{1}{3}\{\pm 1, \pm 3\}$, while $4$-ASK-$1$ is unipolar with $\mathcal{A} = \tfrac{1}{3} \left\{0,1,2,3\right\}$.
 
 The code examples below consider the setup:
 
@@ -43,8 +45,8 @@ Parameter                 | Value
 Modulation order          | $M = 16$
 Pulse shape               | Frequency domain root-raised cosine pulse
 Roll-off factor           | $0.01$
-Fiber length              | $4.0 \, \mathrm{km}$ (C-band, $\lambda=1550\, \mathrm{nm}$)
-Symbol rate               | $300 \, \mathrm{GSym/s}$ 
+Fiber length              | $4.0  \mathrm{km}$ (C-band, $\lambda=1550 \mathrm{nm}$)
+Symbol rate               | $300  \mathrm{GSym/s}$ 
 Noise                     |  Optical or electrical   
 
 The optical or electrical noise variance is fixed and we vary the average transmit power $P_\text{tx}$. Hence SNR $= P_\text{tx}$. 
@@ -56,23 +58,21 @@ We provide the two examples:
 
 ### Rates vs. SNR
 
-The plots show rates versus SNR for $16$-ASK-$o$, $L=4\,\mathrm{km}$ and SIC with $S=4$ levels. A smaller constellation offset $o$ is significantly more power efficient. Setting $o=0.2$ gains $\approx 5.3\, \mathrm{dB}$ and $\approx 2.6\, \mathrm{dB}$  over legacy PAM modulation ($o=1$)  for optical and  electrical noise, respectively. The gap of $16$-ASK-$0.2$ to the (real) coherent capacity is $\approx 0.4\,\mathrm{bpcu}$.  
+The plots show rates versus SNR for $16$-ASK-$o$, $L=4\mathrm{km}$ and SIC with $S=4$ levels. A smaller constellation offset $o$ is significantly more power efficient. Setting $o=0.2$ gains $\approx 5.3 \mathrm{dB}$ and $\approx 2.6 \mathrm{dB}$  over legacy PAM modulation ($o=1$)  for optical and  electrical noise, respectively. The gap of $16$-ASK-$0.2$ to the (real) coherent capacity is $\approx 0.4\mathrm{bpcu}$.  
 
 | Example 1a (Optical Noise) | Example 1b (Electrical Noise)|
 |--------|--------|
-| 
-![Example 1a](png/optical-16-ASK-o_rates.png) | ![Example 1b](png/electrical-16-ASK-o_rates.png) |
+| ![Example 1a](png/optical-16-ASK-o_rates.png) | ![Example 1b](png/electrical-16-ASK-o_rates.png) |
 
 
 ### Rates vs. Iterations
 
-The plots show the achievable rates versus the number of GVAMP iterations for $16$ transmitted blocks, each consisting of $2048$ $16$-ASK-$0.2$ symbols at a fixed SNR. The fiber length is $L = 4\,\mathrm{km}$ SSMF and the GVAMP receover uses separate detection and decoding (SDD), i.e., $S = 1$. All $16$ blocks converge to rates around to the mean value, indicated by the black curve.
+The plots show the achievable rates versus the number of GVAMP iterations for $16$ transmitted blocks, each consisting of $2048$ $16$-ASK-$0.2$ symbols at a fixed SNR. The fiber length is $L = 4\mathrm{km}$ SSMF and the GVAMP receover uses separate detection and decoding (SDD), i.e., $S = 1$. All $16$ blocks converge to rates around to the mean value, indicated by the black curve.
 
 
-| Example 1a (Optical Noise, $\mathrm{SNR}=23.5\, \mathrm{dB}$) | Example 1b (Electrical Noise, $\mathrm{SNR}=10\, \mathrm{dB}$)|
+| Example 1a (Optical Noise, $\mathrm{SNR}=23.5 \mathrm{dB}$) | Example 1b (Electrical Noise, $\mathrm{SNR}=10 \mathrm{dB}$)|
 |--------|--------|
-| 
-![Example 1a](png/optical_16-ASK-0.2_SNR=23.5dB_SDD_rate_trace.png) | ![Example 1b](png/electrical_16-ASK-0.2_SNR=10dB_SDD_rate_trace.png) |
+| ![Example 1a](png/optical_16-ASK-0.2_SNR=23.5dB_SDD_rate_trace.png) | ![Example 1b](png/electrical_16-ASK-0.2_SNR=10dB_SDD_rate_trace.png) |
 
 
 > [!NOTE]
