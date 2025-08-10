@@ -67,7 +67,7 @@ The plots show rates versus SNR for 16-ASK with offset $o$, $L=4\mathrm{km}$ and
 
 ### Rates vs. Iterations
 
-The plots show the achievable rates versus the number of GVAMP iterations for 16 transmitted blocks, each consisting of 2048 16-ASK-0.2 symbols at a fixed SNR. The fiber length is $L = 4\mathrm{km}$ SSMF and the GVAMP receover uses separate detection and decoding (SDD), i.e., $S = 1$. All 16 blocks converge to rates around to the mean value, indicated by the black curve.
+The plots show the achievable rates versus the number of GVAMP iterations for 16 transmitted blocks, each consisting of 2048 16-ASK-0.2 symbols at a fixed SNR. The fiber length is $L = 4\mathrm{km}$ SSMF and the GVAMP receover uses separate detection and decoding (SDD), i.e., $S = 1$. All 16 blocks converge to rates around the mean value, indicated by the black curve.
 
 
 | Example 1a (Optical Noise, $\mathrm{SNR}=23.5 \mathrm{dB}$) | Example 1b (Electrical Noise, $\mathrm{SNR}=10 \mathrm{dB}$)|
@@ -88,7 +88,7 @@ Start MATLAB and execute
 
 to choose one of the examples. 
 
-[^1]: D. Plabst, Tobias Prinz, Thomas Wiegart, Talha Rahman, Nebojša Stojanović, Stefano Calabrò, Norbert Hanik and Gerhard Kramer, "Achievable Rates for Short-Reach Fiber-Optic Channels With Direct Detection," in *J. Lightw. Technol.*, vol. 40, no. 12, pp. 3602-3613, 15 June15, 2022, doi: 10.1109/JLT.2022.3149574. [[Xplore]](https://ieeexplore.ieee.org/document/9707620)
+[^1]: D. Plabst, T. Prinz, T. Wiegart, T. Rahman, N. Stojanović, S. Calabrò, N. Hanik and G. Kramer, "Achievable Rates for Short-Reach Fiber-Optic Channels With Direct Detection," in *J. Lightw. Technol.*, vol. 40, no. 12, pp. 3602-3613, 15 June15, 2022, doi: 10.1109/JLT.2022.3149574. [[Xplore]](https://ieeexplore.ieee.org/document/9707620)
 
 [^2]: T. Prinz, D. Plabst, T. Wiegart, S. Calabrò, N. Hanik and G. Kramer, "Successive Interference Cancellation for Bandlimited Channels with Direct Detection," in *IEEE Trans. Commun.*, vol. 72, no. 3, pp. 1330-1340, March 2024, doi: 10.1109/TCOMM.2023.3337254.  [[Xplore]](https://ieeexplore.ieee.org/document/10328977)
 
